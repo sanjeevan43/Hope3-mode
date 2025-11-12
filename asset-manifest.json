@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Hope3-mode/static/css/main.fb59bc5c.css",
+    "main.js": "/Hope3-mode/static/js/main.a2c369a5.js",
+    "index.html": "/Hope3-mode/index.html",
+    "main.fb59bc5c.css.map": "/Hope3-mode/static/css/main.fb59bc5c.css.map",
+    "main.a2c369a5.js.map": "/Hope3-mode/static/js/main.a2c369a5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fb59bc5c.css",
+    "static/js/main.a2c369a5.js"
+  ]
+}
