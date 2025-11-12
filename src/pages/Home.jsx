@@ -1,11 +1,41 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-function Home() {
+function HeroSection() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  
+  const backgroundImages = [
+    'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80', // Education
+    'https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80', // Community
+    'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80', // Helping hands
+    'https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'  // Nature/Environment
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % backgroundImages.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [backgroundImages.length]);
+
   return (
-    <div>
-      {/* Hero Section */}
-      <section className="pt-8 pb-16 bg-gradient-to-r from-blue-50 to-white text-center max-w-7xl mx-auto px-6 md:px-12">
+    <section className="relative pt-8 pb-16 text-center max-w-7xl mx-auto px-6 md:px-12 min-h-[500px] flex items-center overflow-hidden">
+      {/* Background Images */}
+      {backgroundImages.map((image, index) => (
+        <div
+          key={index}
+          className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${
+            index === currentSlide ? 'opacity-30' : 'opacity-0'
+          }`}
+          style={{ backgroundImage: `url(${image})` }}
+        />
+      ))}
+      
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-50/90 to-white/90" />
+      
+      {/* Content */}
+      <div className="relative z-10">
         <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
           HOPE3 Foundation
         </h1>
@@ -20,7 +50,30 @@ function Home() {
             Get Involved
           </Link>
         </div>
-      </section>
+      </div>
+      
+      {/* Slide Indicators */}
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
+        {backgroundImages.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={`w-3 h-3 rounded-full transition-colors ${
+              index === currentSlide ? 'bg-blue-600' : 'bg-white/50'
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function Home() {
+  return (
+    <div>
+      {/* Hero Section with Background Slideshow */}
+      <HeroSection />
 
       {/* Mission Section */}
       <section id="mission" className="max-w-7xl mx-auto px-6 md:px-12 py-16">
