@@ -17,10 +17,17 @@ function ImpactHeader({ year, setYear }) {
   const years = ["All", "2022", "2023", "2024"];
   return (
     <header className="max-w-7xl mx-auto px-4 md:px-8 pt-16 pb-8 text-center md:text-left">
-      <h1 tabIndex={-1} className="text-4xl font-extrabold text-gray-900 mb-2">
+      <div className="mb-8 animate-scaleIn">
+        <img 
+          src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+          alt="Community impact and helping hands" 
+          className="w-full h-64 object-cover rounded-lg shadow-lg"
+        />
+      </div>
+      <h1 tabIndex={-1} className="text-4xl font-extrabold text-gray-900 mb-2 animate-slideInLeft">
         Impact
       </h1>
-      <p className="text-gray-700 mb-6 text-lg">Outcomes donors can trust</p>
+      <p className="text-gray-700 mb-6 text-lg animate-slideInRight delay-200">Outcomes donors can trust</p>
       <label htmlFor="year-select" className="sr-only">
         Filter by Year
       </label>
@@ -70,7 +77,7 @@ function KPIGrid({ kpis }) {
       {kpis.map(({ id, label, value }) => (
         <article
           key={id}
-          className={`${neutralBg} p-6 rounded-lg shadow-md flex flex-col justify-between animate-fadeIn`}
+          className={`${neutralBg} p-6 rounded-lg shadow-md flex flex-col justify-between animate-fadeIn hover:shadow-xl hover:scale-105 transition-all duration-300 delay-${id * 100}`}
           role="region"
           aria-labelledby={`kpi-label-${id}`}
         >

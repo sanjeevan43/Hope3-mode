@@ -129,17 +129,24 @@ const pillarIcons = {
 function ProgramsHeader({ onSponsorClick }) {
   return (
     <header className="mb-8 max-w-4xl mx-auto text-center px-4">
-      <h1 className="text-4xl font-bold text-gray-900 mb-4" tabIndex={-1}>
+      <div className="mb-8 animate-scaleIn">
+        <img 
+          src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+          alt="Community programs" 
+          className="w-full h-64 object-cover rounded-lg shadow-lg"
+        />
+      </div>
+      <h1 className="text-4xl font-bold text-gray-900 mb-4 animate-slideInLeft" tabIndex={-1}>
         Programs
       </h1>
-      <p className="text-gray-700 text-lg mb-6">
+      <p className="text-gray-700 text-lg mb-6 animate-slideInRight delay-200">
         HOPE3 Foundation's programs are designed to empower communities through education,
         technology, and sustainable livelihoods. Join us in making a difference.
       </p>
       <button
         type="button"
         onClick={onSponsorClick}
-        className={`${primaryBlueBg} text-white px-6 py-3 font-semibold ${roundedBase} shadow-md ${primaryBlueHoverBg} focus:outline-none focus:ring-2 focus:ring-blue-500 transition`}
+        className={`${primaryBlueBg} text-white px-6 py-3 font-semibold ${roundedBase} shadow-md ${primaryBlueHoverBg} focus:outline-none focus:ring-2 focus:ring-blue-500 transition animate-fadeIn delay-400 hover:scale-105`}
         aria-label="Sponsor a program"
       >
         Sponsor a Program
@@ -252,7 +259,7 @@ function ProgramCard({ program, onViewDetails, onSponsor }) {
 
   return (
     <article
-      className={`${neutralBg} p-6 rounded-lg shadow-md flex flex-col justify-between`}
+      className={`${neutralBg} p-6 rounded-lg shadow-md flex flex-col justify-between animate-fadeIn hover:shadow-xl hover:scale-105 transition-all duration-300`}
       role="region"
       aria-labelledby={`program-title-${program.id}`}
     >

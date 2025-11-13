@@ -10,8 +10,11 @@ function Navbar() {
   return (
     <nav className="w-full bg-white shadow-md fixed top-0 left-0 z-30">
       <div className="max-w-7xl mx-auto flex justify-between items-center p-4 md:px-8">
-        <Link to="/" className="text-2xl font-bold text-blue-600 select-none">
-          HOPE3
+        <Link to="/" className="flex items-center space-x-2 text-2xl font-bold text-blue-600 select-none animate-fadeIn">
+          <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
+            H3
+          </div>
+          <span>HOPE3</span>
         </Link>
         <ul className="hidden md:flex space-x-8 text-gray-700 font-medium">
           <li>
