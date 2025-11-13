@@ -33,18 +33,8 @@ function Navbar() {
             </Link>
           </li>
           <li>
-            <Link to="/success-stories" className={`hover:text-blue-600 ${isActive('/success-stories') ? 'text-blue-600' : ''}`}>
-              Stories
-            </Link>
-          </li>
-          <li>
-            <Link to="/events" className={`hover:text-blue-600 ${isActive('/events') ? 'text-blue-600' : ''}`}>
-              Events
-            </Link>
-          </li>
-          <li>
-            <Link to="/student-projects" className={`hover:text-blue-600 ${isActive('/student-projects') ? 'text-blue-600' : ''}`}>
-              Projects
+            <Link to="/community" className={`hover:text-blue-600 ${isActive('/community') ? 'text-blue-600' : ''}`}>
+              Community
             </Link>
           </li>
           <li>
@@ -72,9 +62,7 @@ function Navbar() {
             <li><Link to="/" onClick={() => setMenuOpen(false)} className="block hover:text-blue-600">Home</Link></li>
             <li><Link to="/programs" onClick={() => setMenuOpen(false)} className="block hover:text-blue-600">Programs</Link></li>
             <li><Link to="/impact" onClick={() => setMenuOpen(false)} className="block hover:text-blue-600">Impact</Link></li>
-            <li><Link to="/success-stories" onClick={() => setMenuOpen(false)} className="block hover:text-blue-600">Stories</Link></li>
-            <li><Link to="/events" onClick={() => setMenuOpen(false)} className="block hover:text-blue-600">Events</Link></li>
-            <li><Link to="/student-projects" onClick={() => setMenuOpen(false)} className="block hover:text-blue-600">Projects</Link></li>
+            <li><Link to="/community" onClick={() => setMenuOpen(false)} className="block hover:text-blue-600">Community</Link></li>
             <li><Link to="/contact" onClick={() => setMenuOpen(false)} className="block hover:text-blue-600">Contact</Link></li>
           </ul>
         </div>

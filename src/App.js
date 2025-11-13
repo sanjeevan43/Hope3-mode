@@ -2,9 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Programs from './pages/Programs';
 import Impact from './pages/Impact';
-import SuccessStories from './pages/SuccessStories';
-import Events from './pages/Events';
-import StudentProjects from './pages/StudentProjects';
+import Community from './pages/Community';
 import Contact from './pages/Contact';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -19,9 +17,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/programs" element={<Programs />} />
             <Route path="/impact" element={<Impact />} />
-            <Route path="/success-stories" element={<SuccessStories />} />
-            <Route path="/events" element={<Events />} />
-            <Route path="/student-projects" element={<StudentProjects />} />
+            <Route path="/community" element={<Community />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
