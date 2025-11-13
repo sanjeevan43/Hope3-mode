@@ -12,18 +12,14 @@ function Navbar() {
       <div className="max-w-7xl mx-auto flex justify-between items-center p-4 md:px-8">
         <Link to="/" className="flex items-center space-x-2 text-2xl font-bold text-blue-600 select-none animate-fadeIn hover:scale-105 transition-transform duration-200">
           <img 
-            src="%PUBLIC_URL%/logo.png" 
+            src={process.env.PUBLIC_URL + '/logo.png'} 
             alt="HOPE3 Foundation Logo" 
             className="w-10 h-10 rounded-xl shadow-lg"
-            onError={(e) => {
-              e.target.style.display = 'none';
-              e.target.nextSibling.style.display = 'flex';
-            }}
           />
-          <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl items-center justify-center text-white font-bold shadow-lg" style={{display: 'none'}}>
-            H3
+          <div className="flex flex-col">
+            <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">HOPE or 3</span>
+            <h6 className="text-xs text-gray-500 font-normal -mt-1">FOR A BETTER TOMORROW</h6>
           </div>
-          <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">HOPE3</span>
         </Link>
         <ul className="hidden md:flex space-x-8 text-gray-700 font-medium">
           <li>

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function HeroSection() {
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 overflow-hidden">
+    <section className="relative min-h-screen bg-gradient-to-br from-blue-900 via-indigo-800 to-cyan-900 overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
@@ -14,9 +14,9 @@ function HeroSection() {
       {/* Floating Geometric Shapes */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-32 h-32 bg-blue-400/10 rounded-full animate-pulse delay-1000"></div>
-        <div className="absolute top-40 right-20 w-24 h-24 bg-green-400/10 rounded-full animate-pulse delay-2000"></div>
-        <div className="absolute bottom-40 left-20 w-20 h-20 bg-orange-400/10 rounded-full animate-pulse delay-3000"></div>
-        <div className="absolute top-1/2 right-10 w-16 h-16 bg-purple-400/10 rounded-full animate-pulse delay-1500"></div>
+        <div className="absolute top-40 right-20 w-24 h-24 bg-indigo-400/10 rounded-full animate-pulse delay-2000"></div>
+        <div className="absolute bottom-40 left-20 w-20 h-20 bg-cyan-400/10 rounded-full animate-pulse delay-3000"></div>
+        <div className="absolute top-1/2 right-10 w-16 h-16 bg-sky-400/10 rounded-full animate-pulse delay-1500"></div>
       </div>
 
       <div className="relative z-10 min-h-screen flex items-center">
@@ -27,28 +27,30 @@ function HeroSection() {
               <div className="animate-fadeIn">
                 <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-6">
                   <span className="text-sm font-medium flex items-center gap-2">
-                    <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                    <span className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></span>
                     Transforming Lives Since 2018
                   </span>
                 </div>
               </div>
               
               <div className="animate-slideInLeft">
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6">
-                  Building
-                  <span className="block bg-gradient-to-r from-blue-400 via-green-400 to-orange-400 bg-clip-text text-transparent">
-                    HOPE
-                  </span>
-                  <span className="block text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-light">
-                    for Communities
-                  </span>
-                </h1>
+                <div className="relative w-full h-64 overflow-hidden rounded-3xl shadow-2xl mb-6">
+                  <div className="flex animate-slide" style={{animation: 'slide 15s infinite'}}>
+                    <img src={process.env.PUBLIC_URL + '/myTeam.jpg'} alt="HOPE3 Team Members" className="w-full h-64 object-cover flex-shrink-0" />
+                    <img src={process.env.PUBLIC_URL + '/hope.jpg'} alt="Community Outreach" className="w-full h-64 object-cover flex-shrink-0" />
+                    <img src={process.env.PUBLIC_URL + '/liked-one.jpg'} alt="Empowerment Program" className="w-full h-64 object-cover flex-shrink-0" />
+                    <img src={process.env.PUBLIC_URL + '/first.jpg'} alt="Foundation Activities" className="w-full h-64 object-cover flex-shrink-0" />
+                    <img src={process.env.PUBLIC_URL + '/function.jpg'} alt="Community Events" className="w-full h-64 object-cover flex-shrink-0" />
+                    <img src={process.env.PUBLIC_URL + '/pongal.jpg'} alt="Cultural Celebration" className="w-full h-64 object-cover flex-shrink-0" />
+
+                  </div>
+                </div>
               </div>
               
               <div className="animate-slideInLeft delay-200">
                 <p className="text-xl lg:text-2xl text-blue-100 leading-relaxed max-w-2xl">
-                  Empowering lives through Education, Empowerment, and Entrepreneurship across 50+ countries worldwide
-                </p>
+                              I’m shaped by a big HOPE3 family, where every person adds strength to my journey.  
+                                            </p>
               </div>
               
               <div className="animate-fadeIn delay-400">
@@ -58,11 +60,11 @@ function HeroSection() {
                     <span>25,800+ Lives Impacted</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                    <div className="w-3 h-3 bg-indigo-400 rounded-full"></div>
                     <span>50+ Countries</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="w-3 h-3 bg-orange-400 rounded-full"></div>
+                    <div className="w-3 h-3 bg-cyan-400 rounded-full"></div>
                     <span>$2.5M+ Raised</span>
                   </div>
                 </div>
@@ -70,7 +72,7 @@ function HeroSection() {
               
               <div className="animate-scaleIn delay-600">
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Link to="/programs" className="group bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                  <Link to="/programs" className="group bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl">
                     <span className="flex items-center justify-center gap-2">
                       Explore Programs
                       <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -95,28 +97,28 @@ function HeroSection() {
               <div className="relative">
                 {/* Main Circle */}
                 <div className="w-96 h-96 mx-auto relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-purple-600/20 rounded-full animate-pulse"></div>
-                  <div className="absolute inset-4 bg-gradient-to-br from-blue-500/30 to-purple-700/30 rounded-full animate-pulse delay-500"></div>
-                  <div className="absolute inset-8 bg-gradient-to-br from-blue-600/40 to-purple-800/40 rounded-full animate-pulse delay-1000"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-indigo-600/20 rounded-full animate-pulse"></div>
+                  <div className="absolute inset-4 bg-gradient-to-br from-blue-500/30 to-indigo-700/30 rounded-full animate-pulse delay-500"></div>
+                  <div className="absolute inset-8 bg-gradient-to-br from-blue-600/40 to-indigo-800/40 rounded-full animate-pulse delay-1000"></div>
                   
                   {/* Center Content */}
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center">
                       <div className="text-6xl font-bold text-white mb-4">H3</div>
                       <div className="text-xl font-semibold text-blue-200">HOPE3</div>
-                      <div className="text-sm text-blue-300 mt-2">Foundation</div>
+                      <div className="text-sm text-blue-300 mt-2">Family</div>
                     </div>
                   </div>
                   
                   {/* Orbiting Elements */}
-                  <div className="absolute top-8 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-r from-blue-400 to-blue-500 rounded-2xl flex items-center justify-center text-white font-bold animate-bounce">
-                    EDU
+                  <div className="absolute top-8 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-2xl flex items-center justify-center text-white font-bold animate-bounce">
+                    love
                   </div>
-                  <div className="absolute right-8 top-1/2 transform -translate-y-1/2 w-16 h-16 bg-gradient-to-r from-green-400 to-green-500 rounded-2xl flex items-center justify-center text-white font-bold animate-bounce delay-500">
-                    EMP
+                  <div className="absolute right-8 top-1/2 transform -translate-y-1/2 w-16 h-16 bg-gradient-to-r from-indigo-400 to-cyan-500 rounded-2xl flex items-center justify-center text-white font-bold animate-bounce delay-500">
+                    care
                   </div>
-                  <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-r from-orange-400 to-orange-500 rounded-2xl flex items-center justify-center text-white font-bold animate-bounce delay-1000">
-                    ENT
+                  <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-r from-cyan-400 to-sky-500 rounded-2xl flex items-center justify-center text-white font-bold animate-bounce delay-1000">
+                    won
                   </div>
                 </div>
                 
@@ -159,7 +161,7 @@ function Home() {
       <section className="max-w-7xl mx-auto px-6 md:px-12 py-16">
         <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-12 rounded-3xl shadow-2xl mb-16 relative overflow-hidden">
           <div className="absolute right-8 top-8 w-32 h-32 opacity-20">
-            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face" alt="Dr. APJ Abdul Kalam" className="w-full h-full rounded-full object-cover" />
+                    <img src={process.env.PUBLIC_URL + '/kalam.webp'} alt="Education" className="w-full h-64 object-cover flex-shrink-0" />
           </div>
           <div className="relative z-10">
             <blockquote className="text-white text-xl md:text-2xl font-medium italic leading-relaxed mb-4">
@@ -192,22 +194,22 @@ function Home() {
             </ul>
           </div>
 
-          <div className="group bg-gradient-to-br from-white to-green-50/50 p-8 rounded-3xl shadow-xl hover:shadow-2xl hover:shadow-green-500/20 transition-all duration-500 hover:-translate-y-3">
-            <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-500 shadow-lg">
+          <div className="group bg-gradient-to-br from-white to-indigo-50/50 p-8 rounded-3xl shadow-xl hover:shadow-2xl hover:shadow-indigo-500/20 transition-all duration-500 hover:-translate-y-3">
+            <div className="w-20 h-20 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-500 shadow-lg">
               <span className="text-white font-bold text-lg">EMP</span>
             </div>
-            <h3 className="text-2xl font-bold text-green-900 mb-4 text-center">Empowerment</h3>
+            <h3 className="text-2xl font-bold text-indigo-900 mb-4 text-center">Empowerment</h3>
             <ul className="text-gray-700 space-y-3 text-left">
               <li className="flex items-start gap-2">
-                <span className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></span>
+                <span className="w-2 h-2 bg-indigo-500 rounded-full mt-2 flex-shrink-0"></span>
                 Opportunity to lead and be part of initiatives
               </li>
               <li className="flex items-start gap-2">
-                <span className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></span>
+                <span className="w-2 h-2 bg-indigo-500 rounded-full mt-2 flex-shrink-0"></span>
                 Discovering inner strengths and understanding soft skills
               </li>
               <li className="flex items-start gap-2">
-                <span className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></span>
+                <span className="w-2 h-2 bg-indigo-500 rounded-full mt-2 flex-shrink-0"></span>
                 Understanding of English language skills for official communication purposes
               </li>
             </ul>
@@ -261,16 +263,7 @@ function Home() {
                   of what we've accomplished, but we know our work is far from over.
                 </p>
               </div>
-              <div className="mt-8">
-                <Link to="/about" className="group bg-gradient-to-r from-orange-500 via-pink-500 to-rose-500 hover:from-orange-600 hover:via-pink-600 hover:to-rose-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-orange-500/25 border border-orange-400/20 backdrop-blur-sm">
-                  <span className="flex items-center gap-2">
-                    Learn More About Us
-                    <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
-                  </span>
-                </Link>
-              </div>
+              
             </div>
             <div className="relative">
               <div className="grid grid-cols-2 gap-4">
@@ -310,7 +303,7 @@ function Home() {
             <h2 className="text-5xl lg:text-6xl font-bold text-white mb-6 animate-slideInUp">
               Transforming Lives
               <br className="hidden sm:block" />
-              <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent drop-shadow-lg">
+              <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-lg">
                 Across the Globe
               </span>
             </h2>
@@ -321,8 +314,8 @@ function Home() {
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { number: "25,800+", label: "Lives Impacted", icon: "LIVES", color: "from-blue-500 via-cyan-500 to-blue-600" },
-              { number: "50+", label: "Countries Reached", icon: "GLOBAL", color: "from-green-500 via-emerald-500 to-green-600" },
+              { number: "25,800+", label: "Lives Impacted", icon: "LIVES", color: "from-blue-500 via-indigo-500 to-blue-600" },
+              { number: "50+", label: "Countries Reached", icon: "GLOBAL", color: "from-indigo-500 via-purple-500 to-indigo-600" },
               { number: "$2.5M+", label: "Funds Raised", icon: "FUNDS", color: "from-orange-500 via-pink-500 to-orange-600" },
               { number: "150+", label: "Partner Organizations", icon: "PARTNERS", color: "from-purple-500 via-violet-500 to-purple-600" }
             ].map((stat, index) => (
@@ -344,7 +337,7 @@ function Home() {
                   </div>
                   <div className="text-blue-100 font-medium text-lg">{stat.label}</div>
 
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-pink-500/20 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-indigo-500/20 to-cyan-500/20 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
               </div>
             ))}

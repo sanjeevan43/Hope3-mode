@@ -86,6 +86,15 @@
   50% { transform: translateY(-20px); }
 }
 
+@keyframes slide {
+  0%, 16.66% { transform: translateX(0); }
+  16.67%, 33.33% { transform: translateX(-100%); }
+  33.34%, 50% { transform: translateX(-200%); }
+  50.01%, 66.66% { transform: translateX(-300%); }
+  66.67%, 83.33% { transform: translateX(-400%); }
+  83.34%, 100% { transform: translateX(-500%); }
+}
+
 .animate-float { animation: float 3s ease-in-out infinite; }
 
 .animate-fadeIn { animation: fadeIn 1s ease-out forwards; }
