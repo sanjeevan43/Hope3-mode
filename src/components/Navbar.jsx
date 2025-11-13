@@ -12,7 +12,7 @@ function Navbar() {
       <div className="max-w-7xl mx-auto flex justify-between items-center p-4 md:px-8">
         <Link to="/" className="flex items-center space-x-2 text-2xl font-bold text-blue-600 select-none animate-fadeIn hover:scale-105 transition-transform duration-200">
           <img 
-            src="/logo.png" 
+            src="%PUBLIC_URL%/logo.png" 
             alt="HOPE3 Foundation Logo" 
             className="w-10 h-10 rounded-xl shadow-lg"
             onError={(e) => {
@@ -62,6 +62,12 @@ function Navbar() {
               {isActive('/contact') && <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-blue-600 rounded-full"></div>}
             </Link>
           </li>
+          <li>
+            <Link to="/our-family" className={`relative px-3 py-2 rounded-lg transition-all duration-300 hover:bg-blue-50 hover:text-blue-600 hover:scale-105 ${isActive('/our-family') ? 'text-blue-600 bg-blue-50 shadow-sm' : ''}`}>
+              Our Family
+              {isActive('/our-family') && <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-blue-600 rounded-full"></div>}
+            </Link>
+          </li>
         </ul>
         <button
           onClick={() => setMenuOpen(!menuOpen)}
@@ -85,6 +91,7 @@ function Navbar() {
             <li><Link to="/impact" onClick={() => setMenuOpen(false)} className="block hover:text-blue-600">Impact</Link></li>
             <li><Link to="/community" onClick={() => setMenuOpen(false)} className="block hover:text-blue-600">Community</Link></li>
             <li><Link to="/contact" onClick={() => setMenuOpen(false)} className="block hover:text-blue-600">Contact</Link></li>
+            <li><Link to="/our-family" onClick={() => setMenuOpen(false)} className="block hover:text-blue-600">Our Family</Link></li>
           </ul>
         </div>
       )}

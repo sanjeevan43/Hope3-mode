@@ -5,6 +5,7 @@ import Programs from './pages/Programs';
 import Impact from './pages/Impact';
 import Community from './pages/Community';
 import Contact from './pages/Contact';
+import OurFamily from './pages/OurFamily';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
@@ -21,6 +22,7 @@ function App() {
             <Route path="/impact" element={<Impact />} />
             <Route path="/community" element={<Community />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/our-family" element={<OurFamily />} />
           </Routes>
         </main>
         <Footer />

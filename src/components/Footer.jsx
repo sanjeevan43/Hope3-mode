@@ -28,6 +28,7 @@ function Footer() {
               <Link to="/impact" className="hover:text-white transition-colors duration-300">Impact</Link>
               <Link to="/community" className="hover:text-white transition-colors duration-300">Community</Link>
               <Link to="/contact" className="hover:text-white transition-colors duration-300">Contact</Link>
+              <Link to="/our-family" className="hover:text-white transition-colors duration-300">Our Family</Link>
             </nav>
           </div>
           <div>

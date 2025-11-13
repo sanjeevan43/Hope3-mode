@@ -155,46 +155,83 @@ function Home() {
       {/* Hero Section */}
       <HeroSection />
 
-      {/* Mission Section */}
-      <section id="mission" className="max-w-7xl mx-auto px-6 md:px-12 py-16">
-        <div className="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 p-12 rounded-3xl shadow-2xl mb-16 animate-fadeIn border border-white/50 backdrop-blur-sm">
-          <div className="text-center mb-8">
-            <div className="inline-flex items-center bg-gradient-to-r from-blue-100 to-indigo-100 rounded-full px-6 py-3 mb-6 shadow-lg">
-              <span className="text-blue-600 font-semibold">🎯 Our Mission</span>
-            </div>
-            <h2 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-gray-900 via-blue-900 to-indigo-900 bg-clip-text text-transparent mb-6">Transforming Communities</h2>
+      {/* Abdul Kalam Quote */}
+      <section className="max-w-7xl mx-auto px-6 md:px-12 py-16">
+        <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-12 rounded-3xl shadow-2xl mb-16 relative overflow-hidden">
+          <div className="absolute right-8 top-8 w-32 h-32 opacity-20">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face" alt="Dr. APJ Abdul Kalam" className="w-full h-full rounded-full object-cover" />
           </div>
-          <p className="text-xl text-gray-800 leading-relaxed text-center max-w-4xl mx-auto">
-            HOPE3 Foundation is dedicated to transforming lives and communities through our three core pillars:
-            Education, Empowerment, and Entrepreneurship. We believe that by providing quality education,
-            empowering individuals and communities, and fostering entrepreneurial spirit, we can create
-            sustainable positive change that lasts for generations.
-          </p>
+          <div className="relative z-10">
+            <blockquote className="text-white text-xl md:text-2xl font-medium italic leading-relaxed mb-4">
+              "Learning gives creativity, creativity leads to thinking, thinking provides knowledge, and knowledge makes you great"
+            </blockquote>
+            <cite className="text-blue-200 text-lg">- Dr. A.P.J. Abdul Kalam</cite>
+          </div>
         </div>
 
+        {/* Three Pillars */}
         <div className="grid gap-8 md:grid-cols-3 mb-16">
-          <div className="group bg-gradient-to-br from-white to-blue-50/50 p-8 rounded-3xl shadow-xl text-center hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-3 animate-scaleIn border border-blue-100/50 backdrop-blur-sm">
-            <div className="w-20 h-20 bg-gradient-to-br from-blue-500 via-blue-600 to-indigo-600 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:rotate-12 group-hover:scale-110 transition-all duration-500 shadow-lg">
-              <span className="text-3xl">👁️</span>
+          <div className="group bg-gradient-to-br from-white to-blue-50/50 p-8 rounded-3xl shadow-xl hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-3">
+            <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-500 shadow-lg">
+              <span className="text-white font-bold text-lg">EDU</span>
             </div>
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-900 to-indigo-900 bg-clip-text text-transparent mb-4">Our Vision</h3>
-            <p className="text-gray-700 leading-relaxed">A world where everyone has access to quality education, feels empowered to reach their potential, and has opportunities to create sustainable livelihoods.</p>
+            <h3 className="text-2xl font-bold text-blue-900 mb-4 text-center">Education</h3>
+            <ul className="text-gray-700 space-y-3 text-left">
+              <li className="flex items-start gap-2">
+                <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></span>
+                Economic assistance towards an accredited College degree
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></span>
+                Learning with peers through collaborative clubs, events and workshops
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></span>
+                Practical knowledge through interactions with industry experts
+              </li>
+            </ul>
           </div>
 
-          <div className="group bg-gradient-to-br from-white to-green-50/50 p-8 rounded-3xl shadow-xl text-center hover:shadow-2xl hover:shadow-green-500/20 transition-all duration-500 hover:-translate-y-3 animate-scaleIn delay-100 border border-green-100/50 backdrop-blur-sm">
-            <div className="w-20 h-20 bg-gradient-to-br from-green-500 via-emerald-600 to-teal-600 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:rotate-12 group-hover:scale-110 transition-all duration-500 shadow-lg">
-              <span className="text-3xl">💎</span>
+          <div className="group bg-gradient-to-br from-white to-green-50/50 p-8 rounded-3xl shadow-xl hover:shadow-2xl hover:shadow-green-500/20 transition-all duration-500 hover:-translate-y-3">
+            <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-500 shadow-lg">
+              <span className="text-white font-bold text-lg">EMP</span>
             </div>
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-green-900 to-emerald-900 bg-clip-text text-transparent mb-4">Our Values</h3>
-            <p className="text-gray-700 leading-relaxed">Integrity, compassion, innovation, sustainability, and community-centered approach guide everything we do.</p>
+            <h3 className="text-2xl font-bold text-green-900 mb-4 text-center">Empowerment</h3>
+            <ul className="text-gray-700 space-y-3 text-left">
+              <li className="flex items-start gap-2">
+                <span className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></span>
+                Opportunity to lead and be part of initiatives
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></span>
+                Discovering inner strengths and understanding soft skills
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></span>
+                Understanding of English language skills for official communication purposes
+              </li>
+            </ul>
           </div>
 
-          <div className="group bg-gradient-to-br from-white to-purple-50/50 p-8 rounded-3xl shadow-xl text-center hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-500 hover:-translate-y-3 animate-scaleIn delay-200 border border-purple-100/50 backdrop-blur-sm">
-            <div className="w-20 h-20 bg-gradient-to-br from-purple-500 via-violet-600 to-pink-600 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:rotate-12 group-hover:scale-110 transition-all duration-500 shadow-lg">
-              <span className="text-3xl">⚡</span>
+          <div className="group bg-gradient-to-br from-white to-orange-50/50 p-8 rounded-3xl shadow-xl hover:shadow-2xl hover:shadow-orange-500/20 transition-all duration-500 hover:-translate-y-3">
+            <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-red-500 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-500 shadow-lg">
+              <span className="text-white font-bold text-lg">ENT</span>
             </div>
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-900 to-pink-900 bg-clip-text text-transparent mb-4">Our Impact</h3>
-            <p className="text-gray-700 leading-relaxed">Since our founding, we've reached over 25 communities, educated 500+ individuals, and helped start 50+ businesses.</p>
+            <h3 className="text-2xl font-bold text-orange-900 mb-4 text-center">Entrepreneurship</h3>
+            <ul className="text-gray-700 space-y-3 text-left">
+              <li className="flex items-start gap-2">
+                <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></span>
+                Practicing and testing startup ideas
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></span>
+                Exposure and advice from industry experts on Business thinking
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></span>
+                Opportunities to present and promote ideas to clients and investors
+              </li>
+            </ul>
           </div>
         </div>
 
