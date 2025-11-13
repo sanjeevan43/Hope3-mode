@@ -11,7 +11,16 @@ function Navbar() {
     <nav className="w-full bg-white/95 backdrop-blur-md shadow-xl fixed top-0 left-0 z-30 border-b border-gray-100/50">
       <div className="max-w-7xl mx-auto flex justify-between items-center p-4 md:px-8">
         <Link to="/" className="flex items-center space-x-2 text-2xl font-bold text-blue-600 select-none animate-fadeIn hover:scale-105 transition-transform duration-200">
-          <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center text-white font-bold shadow-lg">
+          <img 
+            src="/logo.png" 
+            alt="HOPE3 Foundation Logo" 
+            className="w-10 h-10 rounded-xl shadow-lg"
+            onError={(e) => {
+              e.target.style.display = 'none';
+              e.target.nextSibling.style.display = 'flex';
+            }}
+          />
+          <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl items-center justify-center text-white font-bold shadow-lg" style={{display: 'none'}}>
             H3
           </div>
           <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">HOPE3</span>

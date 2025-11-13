@@ -109,14 +109,14 @@ function HeroSection() {
                   </div>
                   
                   {/* Orbiting Elements */}
-                  <div className="absolute top-8 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-r from-blue-400 to-blue-500 rounded-2xl flex items-center justify-center text-2xl animate-bounce">
-                    📚
+                  <div className="absolute top-8 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-r from-blue-400 to-blue-500 rounded-2xl flex items-center justify-center text-white font-bold animate-bounce">
+                    EDU
                   </div>
-                  <div className="absolute right-8 top-1/2 transform -translate-y-1/2 w-16 h-16 bg-gradient-to-r from-green-400 to-green-500 rounded-2xl flex items-center justify-center text-2xl animate-bounce delay-500">
-                    💪
+                  <div className="absolute right-8 top-1/2 transform -translate-y-1/2 w-16 h-16 bg-gradient-to-r from-green-400 to-green-500 rounded-2xl flex items-center justify-center text-white font-bold animate-bounce delay-500">
+                    EMP
                   </div>
-                  <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-r from-orange-400 to-orange-500 rounded-2xl flex items-center justify-center text-2xl animate-bounce delay-1000">
-                    🚀
+                  <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-r from-orange-400 to-orange-500 rounded-2xl flex items-center justify-center text-white font-bold animate-bounce delay-1000">
+                    ENT
                   </div>
                 </div>
                 
@@ -202,7 +202,7 @@ function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="inline-flex items-center bg-gradient-to-r from-orange-100 to-pink-100 rounded-full px-6 py-3 mb-6 shadow-lg">
-                <span className="text-orange-600 font-semibold">📖 Our Story</span>
+                <span className="text-orange-600 font-semibold">Our Story</span>
               </div>
               <h2 className="text-4xl font-bold bg-gradient-to-r from-gray-900 via-orange-900 to-pink-900 bg-clip-text text-transparent mb-6">From Vision to Impact</h2>
               <div className="space-y-6 text-gray-700 leading-relaxed">
@@ -268,7 +268,7 @@ function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-20">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-md rounded-full px-6 py-3 mb-6 animate-fadeIn border border-white/20 shadow-xl">
-              <span className="text-white font-semibold">📊 Our Global Impact</span>
+              <span className="text-white font-semibold">Our Global Impact</span>
             </div>
             <h2 className="text-5xl lg:text-6xl font-bold text-white mb-6 animate-slideInUp">
               Transforming Lives
@@ -284,10 +284,10 @@ function Home() {
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { number: "25,800+", label: "Lives Impacted", icon: "👥", color: "from-blue-500 via-cyan-500 to-blue-600" },
-              { number: "50+", label: "Countries Reached", icon: "🌍", color: "from-green-500 via-emerald-500 to-green-600" },
-              { number: "$2.5M+", label: "Funds Raised", icon: "💰", color: "from-orange-500 via-pink-500 to-orange-600" },
-              { number: "150+", label: "Partner Organizations", icon: "🤝", color: "from-purple-500 via-violet-500 to-purple-600" }
+              { number: "25,800+", label: "Lives Impacted", icon: "LIVES", color: "from-blue-500 via-cyan-500 to-blue-600" },
+              { number: "50+", label: "Countries Reached", icon: "GLOBAL", color: "from-green-500 via-emerald-500 to-green-600" },
+              { number: "$2.5M+", label: "Funds Raised", icon: "FUNDS", color: "from-orange-500 via-pink-500 to-orange-600" },
+              { number: "150+", label: "Partner Organizations", icon: "PARTNERS", color: "from-purple-500 via-violet-500 to-purple-600" }
             ].map((stat, index) => (
               <div
                 key={stat.label}
@@ -297,7 +297,7 @@ function Home() {
                 <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 text-center border border-white/20 hover:bg-white/20 hover:border-white/30 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20">
                   <div className="relative mb-6">
                     <div className={`w-20 h-20 bg-gradient-to-br ${stat.color} rounded-3xl flex items-center justify-center mx-auto mb-4 group-hover:rotate-12 group-hover:scale-110 transition-all duration-500 shadow-xl border border-white/20`}>
-                      <span className="text-4xl">{stat.icon}</span>
+                      <span className="text-white font-bold text-xs">{stat.icon}</span>
                     </div>
                     <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full animate-pulse shadow-lg"></div>
                   </div>

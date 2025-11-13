@@ -9,34 +9,39 @@ function Footer() {
           backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
         }}></div>
       </div>
-      <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center relative">
-        <div className="text-sm mb-4 md:mb-0">&copy; {new Date().getFullYear()} HOPE3 Foundation. All rights reserved.</div>
-        <nav className="flex flex-wrap justify-center md:justify-end space-x-6">
-          <Link to="/" className="hover:text-white transition-colors duration-300 hover:scale-105 relative">
-            Home
-            <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-cyan-400 transition-all duration-300 hover:w-full"></div>
-          </Link>
-          <Link to="/about" className="hover:text-white transition-colors duration-300 hover:scale-105 relative">
-            About
-            <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-green-400 to-emerald-400 transition-all duration-300 hover:w-full"></div>
-          </Link>
-          <Link to="/programs" className="hover:text-white transition-colors duration-300 hover:scale-105 relative">
-            Programs
-            <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-pink-400 transition-all duration-300 hover:w-full"></div>
-          </Link>
-          <Link to="/impact" className="hover:text-white transition-colors duration-300 hover:scale-105 relative">
-            Impact
-            <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-violet-400 transition-all duration-300 hover:w-full"></div>
-          </Link>
-          <Link to="/community" className="hover:text-white transition-colors duration-300 hover:scale-105 relative">
-            Community
-            <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-400 transition-all duration-300 hover:w-full"></div>
-          </Link>
-          <Link to="/contact" className="hover:text-white transition-colors duration-300 hover:scale-105 relative">
-            Contact
-            <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-pink-400 to-rose-400 transition-all duration-300 hover:w-full"></div>
-          </Link>
-        </nav>
+      <div className="max-w-7xl mx-auto px-6 md:px-12 relative">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          <div>
+            <h3 className="text-white font-semibold mb-4">Contact Us</h3>
+            <div className="space-y-2 text-sm">
+              <p>info@hope3foundation.org</p>
+              <p>+1 (555) 123-4567</p>
+              <p>123 Hope Street, Education City, EC 12345</p>
+            </div>
+          </div>
+          <div>
+            <h3 className="text-white font-semibold mb-4">Quick Links</h3>
+            <nav className="flex flex-col space-y-2 text-sm">
+              <Link to="/" className="hover:text-white transition-colors duration-300">Home</Link>
+              <Link to="/about" className="hover:text-white transition-colors duration-300">About Us</Link>
+              <Link to="/programs" className="hover:text-white transition-colors duration-300">Programs</Link>
+              <Link to="/impact" className="hover:text-white transition-colors duration-300">Impact</Link>
+              <Link to="/community" className="hover:text-white transition-colors duration-300">Community</Link>
+              <Link to="/contact" className="hover:text-white transition-colors duration-300">Contact</Link>
+            </nav>
+          </div>
+          <div>
+            <h3 className="text-white font-semibold mb-4">Follow Us</h3>
+            <div className="flex space-x-4">
+              <a href="https://facebook.com/hope3foundation" className="hover:text-white transition-colors duration-300">Facebook</a>
+              <a href="https://twitter.com/hope3foundation" className="hover:text-white transition-colors duration-300">Twitter</a>
+              <a href="https://linkedin.com/company/hope3foundation" className="hover:text-white transition-colors duration-300">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+        <div className="border-t border-gray-700 pt-6 text-center text-sm">
+          <p>&copy; {new Date().getFullYear()} HOPE3 Foundation. All rights reserved. | Privacy Policy | Terms of Service</p>
+        </div>
       </div>
     </footer>
   );
