@@ -1,4 +1,5 @@
 import React from "react";
+import AnimatedCounter from '../components/AnimatedCounter';
 
 function AboutHeader() {
   return (
@@ -13,7 +14,7 @@ function AboutHeader() {
         <div className="relative z-10 text-center px-4">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-4 animate-slideInLeft">About HOPE3</h1>
           <p className="text-xl md:text-2xl text-white max-w-3xl animate-slideInRight delay-200">
-            Building bridges to brighter futures through Education, Empowerment, and Entrepreneurship
+            Join Hope3 and help provide education to all the economically challenged families. Don't be held back by all the barriers to your success. Join Hope3 today and attain the resources to chase your dreams! None left behind. Every one has an opportunity to rise and achieve. We lift others by providing them financial and education support along their journey for a bright future.
           </p>
         </div>
       </div>
@@ -135,17 +136,28 @@ function ImpactNumbers() {
     <section className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-lg p-8 md:p-12 text-white mb-16 animate-fadeIn">
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Our Impact in Numbers</h2>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-        {stats.map((stat, index) => (
+        {[
+          { number: 25800, label: "Lives Impacted", icon: "👥", suffix: "+" },
+          { number: 50, label: "Countries Reached", icon: "🌍", suffix: "+" },
+          { number: 2.5, label: "Funds Raised", icon: "💰", prefix: "$", suffix: "M+" },
+          { number: 150, label: "Partner Organizations", icon: "🤝", suffix: "+" }
+        ].map((stat, index) => (
           <div 
             key={stat.label}
             className={`text-center animate-scaleIn`}
             style={{ animationDelay: `${index * 0.1}s` }}
           >
             <div className="text-4xl mb-4">{stat.icon}</div>
-            <div className="text-3xl md:text-4xl font-bold mb-2">{stat.number}</div>
+            <div className="text-3xl md:text-4xl font-bold mb-2">
+              <AnimatedCounter 
+                end={stat.number} 
+                prefix={stat.prefix || ''} 
+                suffix={stat.suffix || ''} 
+              />
+            </div>
             <div className="text-blue-100">{stat.label}</div>
           </div>
-        ))}
+        ))
       </div>
     </section>
   );

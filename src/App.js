@@ -1,13 +1,14 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
-import Programs from './pages/Programs';
 import Impact from './pages/Impact';
 import Community from './pages/Community';
 import Contact from './pages/Contact';
 import OurFamily from './pages/OurFamily';
+import Volunteer from './pages/Volunteer';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import FloatingDonateButton from './components/FloatingDonateButton';
 
 function App() {
   return (
@@ -18,14 +19,15 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/programs" element={<Programs />} />
             <Route path="/impact" element={<Impact />} />
             <Route path="/community" element={<Community />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/our-family" element={<OurFamily />} />
+            <Route path="/volunteer" element={<Volunteer />} />
           </Routes>
         </main>
         <Footer />
+        <FloatingDonateButton />
       </div>
     </Router>
   );

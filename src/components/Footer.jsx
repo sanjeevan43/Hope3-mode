@@ -24,7 +24,7 @@ function Footer() {
             <nav className="flex flex-col space-y-2 text-sm">
               <Link to="/" className="hover:text-white transition-colors duration-300">Home</Link>
               <Link to="/about" className="hover:text-white transition-colors duration-300">About Us</Link>
-              <Link to="/programs" className="hover:text-white transition-colors duration-300">Programs</Link>
+              <Link to="/volunteer" className="hover:text-white transition-colors duration-300">Volunteer</Link>
               <Link to="/impact" className="hover:text-white transition-colors duration-300">Impact</Link>
               <Link to="/community" className="hover:text-white transition-colors duration-300">Community</Link>
               <Link to="/contact" className="hover:text-white transition-colors duration-300">Contact</Link>

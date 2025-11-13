@@ -1,5 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import DonationTracker from '../components/DonationTracker';
+import NewsletterSignup from '../components/NewsletterSignup';
+import TestimonialCarousel from '../components/TestimonialCarousel';
+import AnimatedCounter from '../components/AnimatedCounter';
 
 function HeroSection() {
   return (
@@ -24,15 +28,6 @@ function HeroSection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
             <div className="text-white space-y-8">
-              <div className="animate-fadeIn">
-                <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-6">
-                  <span className="text-sm font-medium flex items-center gap-2">
-                    <span className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></span>
-                    Transforming Lives Since 2018
-                  </span>
-                </div>
-              </div>
-              
               <div className="animate-slideInLeft">
                 <div className="relative w-full h-64 overflow-hidden rounded-3xl shadow-2xl mb-6">
                   <div className="flex animate-slide" style={{animation: 'slide 15s infinite'}}>
@@ -72,9 +67,9 @@ function HeroSection() {
               
               <div className="animate-scaleIn delay-600">
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Link to="/programs" className="group bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                  <Link to="/volunteer" className="group bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl">
                     <span className="flex items-center justify-center gap-2">
-                      Explore Programs
+                      Join as Volunteer
                       <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                       </svg>
@@ -314,10 +309,10 @@ function Home() {
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { number: "25,800+", label: "Lives Impacted", icon: "LIVES", color: "from-blue-500 via-indigo-500 to-blue-600" },
-              { number: "50+", label: "Countries Reached", icon: "GLOBAL", color: "from-indigo-500 via-purple-500 to-indigo-600" },
-              { number: "$2.5M+", label: "Funds Raised", icon: "FUNDS", color: "from-orange-500 via-pink-500 to-orange-600" },
-              { number: "150+", label: "Partner Organizations", icon: "PARTNERS", color: "from-purple-500 via-violet-500 to-purple-600" }
+              { number: 25800, label: "Lives Impacted", icon: "LIVES", color: "from-blue-500 via-indigo-500 to-blue-600", suffix: "+" },
+              { number: 50, label: "Countries Reached", icon: "GLOBAL", color: "from-indigo-500 via-purple-500 to-indigo-600", suffix: "+" },
+              { number: 2.5, label: "Funds Raised", icon: "FUNDS", color: "from-orange-500 via-pink-500 to-orange-600", prefix: "$", suffix: "M+" },
+              { number: 150, label: "Partner Organizations", icon: "PARTNERS", color: "from-purple-500 via-violet-500 to-purple-600", suffix: "+" }
             ].map((stat, index) => (
               <div
                 key={stat.label}
@@ -333,7 +328,11 @@ function Home() {
                   </div>
 
                   <div className="text-4xl lg:text-5xl font-bold text-white mb-3 group-hover:scale-110 transition-transform duration-300 drop-shadow-lg">
-                    {stat.number}
+                    <AnimatedCounter 
+                      end={stat.number} 
+                      prefix={stat.prefix || ''} 
+                      suffix={stat.suffix || ''} 
+                    />
                   </div>
                   <div className="text-blue-100 font-medium text-lg">{stat.label}</div>
 
@@ -342,6 +341,17 @@ function Home() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* New Unique Sections */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+          <div className="grid lg:grid-cols-2 gap-12 mb-16">
+            <DonationTracker />
+            <NewsletterSignup />
+          </div>
+          <TestimonialCarousel />
         </div>
       </section>
     </div>

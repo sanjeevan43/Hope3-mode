@@ -1,17 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
+import ImpactMap from '../components/ImpactMap';
 
 // Color & style constants
 const primaryBlueBg = "bg-blue-600";
-const primaryBlueText = "text-blue-600";
 const primaryBlueHoverBg = "hover:bg-blue-700";
 const softGreenBg = "bg-green-500";
-const softGreenText = "text-green-500";
 const softGreenHoverBg = "hover:bg-green-600";
-const neutralDarkText = "text-gray-900";
-const neutralLightText = "text-gray-700";
 const neutralBg = "bg-white";
-const roundedBase = "rounded-lg";
-const shadowBase = "shadow-md";
 
 function ImpactHeader({ year, setYear }) {
   const years = ["All", "2022", "2023", "2024"];
@@ -20,7 +15,7 @@ function ImpactHeader({ year, setYear }) {
       <div className="mb-8 animate-scaleIn">
         <img 
           src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-          alt="Community impact and helping hands" 
+          alt="Community impact" 
           className="w-full h-64 object-cover rounded-lg shadow-lg"
         />
       </div>
@@ -261,7 +256,7 @@ function StoryModal({ story, onClose }) {
         </header>
         <img
           src={story.photo}
-          alt={`Photo of ${story.name}`}
+          alt={story.name}
           className="w-48 h-48 rounded-full object-cover mb-4 mx-auto"
           loading="lazy"
         />
@@ -641,6 +636,9 @@ export default function Impact() {
           </div>
         </section>
         <ReportDownloads reports={reports} />
+        <section className="mb-12">
+          <ImpactMap />
+        </section>
         <ImpactBreakdown breakdown={fundBreakdown} />
         <DataTransparencyNote />
         <FAQAccordion />

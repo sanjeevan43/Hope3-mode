@@ -17,7 +17,7 @@ function Navbar() {
             className="w-10 h-10 rounded-xl shadow-lg"
           />
           <div className="flex flex-col">
-            <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">HOPE or 3</span>
+            <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">HOPE 3</span>
             <h6 className="text-xs text-gray-500 font-normal -mt-1">FOR A BETTER TOMORROW</h6>
           </div>
         </Link>
@@ -34,12 +34,7 @@ function Navbar() {
               {isActive('/about') && <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-blue-600 rounded-full"></div>}
             </Link>
           </li>
-          <li>
-            <Link to="/programs" className={`relative px-3 py-2 rounded-lg transition-all duration-300 hover:bg-blue-50 hover:text-blue-600 hover:scale-105 ${isActive('/programs') ? 'text-blue-600 bg-blue-50 shadow-sm' : ''}`}>
-              Programs
-              {isActive('/programs') && <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-blue-600 rounded-full"></div>}
-            </Link>
-          </li>
+
           <li>
             <Link to="/impact" className={`relative px-3 py-2 rounded-lg transition-all duration-300 hover:bg-blue-50 hover:text-blue-600 hover:scale-105 ${isActive('/impact') ? 'text-blue-600 bg-blue-50 shadow-sm' : ''}`}>
               Impact
@@ -52,18 +47,24 @@ function Navbar() {
               {isActive('/community') && <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-blue-600 rounded-full"></div>}
             </Link>
           </li>
-          <li>
-            <Link to="/contact" className={`relative px-3 py-2 rounded-lg transition-all duration-300 hover:bg-blue-50 hover:text-blue-600 hover:scale-105 ${isActive('/contact') ? 'text-blue-600 bg-blue-50 shadow-sm' : ''}`}>
-              Contact
-              {isActive('/contact') && <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-blue-600 rounded-full"></div>}
-            </Link>
-          </li>
-          <li>
+           <li>
             <Link to="/our-family" className={`relative px-3 py-2 rounded-lg transition-all duration-300 hover:bg-blue-50 hover:text-blue-600 hover:scale-105 ${isActive('/our-family') ? 'text-blue-600 bg-blue-50 shadow-sm' : ''}`}>
               Our Family
               {isActive('/our-family') && <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-blue-600 rounded-full"></div>}
             </Link>
           </li>
+          <li>
+            <Link to="/volunteer" className={`relative px-3 py-2 rounded-lg transition-all duration-300 hover:bg-blue-50 hover:text-blue-600 hover:scale-105 ${isActive('/volunteer') ? 'text-blue-600 bg-blue-50 shadow-sm' : ''}`}>
+              Volunteer
+              {isActive('/volunteer') && <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-blue-600 rounded-full"></div>}
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact" className={`relative px-3 py-2 rounded-lg transition-all duration-300 hover:bg-blue-50 hover:text-blue-600 hover:scale-105 ${isActive('/contact') ? 'text-blue-600 bg-blue-50 shadow-sm' : ''}`}>
+              Contact
+              {isActive('/contact') && <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-blue-600 rounded-full"></div>}
+            </Link>
+          </li>         
         </ul>
         <button
           onClick={() => setMenuOpen(!menuOpen)}
@@ -83,9 +84,10 @@ function Navbar() {
           <ul className="flex flex-col space-y-4 p-4 font-medium text-gray-700">
             <li><Link to="/" onClick={() => setMenuOpen(false)} className="block hover:text-blue-600">Home</Link></li>
             <li><Link to="/about" onClick={() => setMenuOpen(false)} className="block hover:text-blue-600">About</Link></li>
-            <li><Link to="/programs" onClick={() => setMenuOpen(false)} className="block hover:text-blue-600">Programs</Link></li>
+
             <li><Link to="/impact" onClick={() => setMenuOpen(false)} className="block hover:text-blue-600">Impact</Link></li>
             <li><Link to="/community" onClick={() => setMenuOpen(false)} className="block hover:text-blue-600">Community</Link></li>
+            <li><Link to="/volunteer" onClick={() => setMenuOpen(false)} className="block hover:text-blue-600">Volunteer</Link></li>
             <li><Link to="/contact" onClick={() => setMenuOpen(false)} className="block hover:text-blue-600">Contact</Link></li>
             <li><Link to="/our-family" onClick={() => setMenuOpen(false)} className="block hover:text-blue-600">Our Family</Link></li>
           </ul>

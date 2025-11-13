@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import LiveActivityFeed from '../components/LiveActivityFeed';
 
 // Mock data from original pages
 const mockStories = [
@@ -157,7 +158,7 @@ function SuccessStoriesSection() {
           >
             <img
               src={story.photo}
-              alt={`Photo of ${story.name}`}
+              alt={story.name}
               className="w-full h-48 object-cover"
             />
             <div className="p-6">
@@ -196,7 +197,7 @@ function EventsSection() {
             <div className="relative">
               <img
                 src={event.heroPhoto}
-                alt={`${event.title} event photo`}
+                alt={event.title}
                 className="w-full h-48 object-cover"
               />
               <div className="absolute bottom-4 left-4">
@@ -306,7 +307,14 @@ export default function Community() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <CommunityHeader />
         <TabNavigation activeTab={activeTab} setActiveTab={setActiveTab} />
-        {renderContent()}
+        <div className="grid lg:grid-cols-3 gap-8">
+          <div className="lg:col-span-2">
+            {renderContent()}
+          </div>
+          <div className="lg:col-span-1">
+            <LiveActivityFeed />
+          </div>
+        </div>
       </div>
     </div>
   );
