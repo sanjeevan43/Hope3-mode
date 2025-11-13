@@ -8,38 +8,49 @@ function Navbar() {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <nav className="w-full bg-white shadow-md fixed top-0 left-0 z-30">
+    <nav className="w-full bg-white/95 backdrop-blur-md shadow-xl fixed top-0 left-0 z-30 border-b border-gray-100/50">
       <div className="max-w-7xl mx-auto flex justify-between items-center p-4 md:px-8">
-        <Link to="/" className="flex items-center space-x-2 text-2xl font-bold text-blue-600 select-none animate-fadeIn">
-          <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
+        <Link to="/" className="flex items-center space-x-2 text-2xl font-bold text-blue-600 select-none animate-fadeIn hover:scale-105 transition-transform duration-200">
+          <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center text-white font-bold shadow-lg">
             H3
           </div>
-          <span>HOPE3</span>
+          <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">HOPE3</span>
         </Link>
         <ul className="hidden md:flex space-x-8 text-gray-700 font-medium">
           <li>
-            <Link to="/" className={`hover:text-blue-600 ${isActive('/') ? 'text-blue-600' : ''}`}>
+            <Link to="/" className={`relative px-3 py-2 rounded-lg transition-all duration-300 hover:bg-blue-50 hover:text-blue-600 hover:scale-105 ${isActive('/') ? 'text-blue-600 bg-blue-50 shadow-sm' : ''}`}>
               Home
+              {isActive('/') && <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-blue-600 rounded-full"></div>}
             </Link>
           </li>
           <li>
-            <Link to="/programs" className={`hover:text-blue-600 ${isActive('/programs') ? 'text-blue-600' : ''}`}>
+            <Link to="/about" className={`relative px-3 py-2 rounded-lg transition-all duration-300 hover:bg-blue-50 hover:text-blue-600 hover:scale-105 ${isActive('/about') ? 'text-blue-600 bg-blue-50 shadow-sm' : ''}`}>
+              About
+              {isActive('/about') && <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-blue-600 rounded-full"></div>}
+            </Link>
+          </li>
+          <li>
+            <Link to="/programs" className={`relative px-3 py-2 rounded-lg transition-all duration-300 hover:bg-blue-50 hover:text-blue-600 hover:scale-105 ${isActive('/programs') ? 'text-blue-600 bg-blue-50 shadow-sm' : ''}`}>
               Programs
+              {isActive('/programs') && <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-blue-600 rounded-full"></div>}
             </Link>
           </li>
           <li>
-            <Link to="/impact" className={`hover:text-blue-600 ${isActive('/impact') ? 'text-blue-600' : ''}`}>
+            <Link to="/impact" className={`relative px-3 py-2 rounded-lg transition-all duration-300 hover:bg-blue-50 hover:text-blue-600 hover:scale-105 ${isActive('/impact') ? 'text-blue-600 bg-blue-50 shadow-sm' : ''}`}>
               Impact
+              {isActive('/impact') && <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-blue-600 rounded-full"></div>}
             </Link>
           </li>
           <li>
-            <Link to="/community" className={`hover:text-blue-600 ${isActive('/community') ? 'text-blue-600' : ''}`}>
+            <Link to="/community" className={`relative px-3 py-2 rounded-lg transition-all duration-300 hover:bg-blue-50 hover:text-blue-600 hover:scale-105 ${isActive('/community') ? 'text-blue-600 bg-blue-50 shadow-sm' : ''}`}>
               Community
+              {isActive('/community') && <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-blue-600 rounded-full"></div>}
             </Link>
           </li>
           <li>
-            <Link to="/contact" className={`hover:text-blue-600 ${isActive('/contact') ? 'text-blue-600' : ''}`}>
+            <Link to="/contact" className={`relative px-3 py-2 rounded-lg transition-all duration-300 hover:bg-blue-50 hover:text-blue-600 hover:scale-105 ${isActive('/contact') ? 'text-blue-600 bg-blue-50 shadow-sm' : ''}`}>
               Contact
+              {isActive('/contact') && <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-blue-600 rounded-full"></div>}
             </Link>
           </li>
         </ul>
@@ -60,6 +71,7 @@ function Navbar() {
         <div className="md:hidden bg-white shadow-inner border-t border-gray-200">
           <ul className="flex flex-col space-y-4 p-4 font-medium text-gray-700">
             <li><Link to="/" onClick={() => setMenuOpen(false)} className="block hover:text-blue-600">Home</Link></li>
+            <li><Link to="/about" onClick={() => setMenuOpen(false)} className="block hover:text-blue-600">About</Link></li>
             <li><Link to="/programs" onClick={() => setMenuOpen(false)} className="block hover:text-blue-600">Programs</Link></li>
             <li><Link to="/impact" onClick={() => setMenuOpen(false)} className="block hover:text-blue-600">Impact</Link></li>
             <li><Link to="/community" onClick={() => setMenuOpen(false)} className="block hover:text-blue-600">Community</Link></li>
