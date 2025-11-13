@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import LiveActivityFeed from '../components/LiveActivityFeed';
 
 // Mock data from original pages
 const mockStories = [
@@ -307,14 +306,7 @@ export default function Community() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <CommunityHeader />
         <TabNavigation activeTab={activeTab} setActiveTab={setActiveTab} />
-        <div className="grid lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-2">
-            {renderContent()}
-          </div>
-          <div className="lg:col-span-1">
-            <LiveActivityFeed />
-          </div>
-        </div>
+        {renderContent()}
       </div>
     </div>
   );

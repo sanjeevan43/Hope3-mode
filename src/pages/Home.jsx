@@ -1,9 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import DonationTracker from '../components/DonationTracker';
-import NewsletterSignup from '../components/NewsletterSignup';
-import TestimonialCarousel from '../components/TestimonialCarousel';
-import AnimatedCounter from '../components/AnimatedCounter';
 
 function HeroSection() {
   return (
@@ -28,6 +24,15 @@ function HeroSection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
             <div className="text-white space-y-8">
+              <div className="animate-fadeIn">
+                <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-6">
+                  <span className="text-sm font-medium flex items-center gap-2">
+                    <span className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></span>
+                    Transforming Lives Since 2018
+                  </span>
+                </div>
+              </div>
+              
               <div className="animate-slideInLeft">
                 <div className="relative w-full h-64 overflow-hidden rounded-3xl shadow-2xl mb-6">
                   <div className="flex animate-slide" style={{animation: 'slide 15s infinite'}}>
@@ -48,22 +53,6 @@ function HeroSection() {
                                             </p>
               </div>
               
-              <div className="animate-fadeIn delay-400">
-                <div className="flex flex-wrap gap-6 text-sm font-medium">
-                  <div className="flex items-center gap-2">
-                    <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
-                    <span>25,800+ Lives Impacted</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-3 h-3 bg-indigo-400 rounded-full"></div>
-                    <span>50+ Countries</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-3 h-3 bg-cyan-400 rounded-full"></div>
-                    <span>$2.5M+ Raised</span>
-                  </div>
-                </div>
-              </div>
               
               <div className="animate-scaleIn delay-600">
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -282,78 +271,7 @@ function Home() {
         </div>
       </section>
 
-      {/* Impact Stats */}
-      <section className="py-24 bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-full h-full" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-          }}></div>
-        </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center bg-white/10 backdrop-blur-md rounded-full px-6 py-3 mb-6 animate-fadeIn border border-white/20 shadow-xl">
-              <span className="text-white font-semibold">Our Global Impact</span>
-            </div>
-            <h2 className="text-5xl lg:text-6xl font-bold text-white mb-6 animate-slideInUp">
-              Transforming Lives
-              <br className="hidden sm:block" />
-              <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-lg">
-                Across the Globe
-              </span>
-            </h2>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto animate-fadeIn delay-400">
-              Every number represents a life changed, a dream realized, and a community empowered
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { number: 25800, label: "Lives Impacted", icon: "LIVES", color: "from-blue-500 via-indigo-500 to-blue-600", suffix: "+" },
-              { number: 50, label: "Countries Reached", icon: "GLOBAL", color: "from-indigo-500 via-purple-500 to-indigo-600", suffix: "+" },
-              { number: 2.5, label: "Funds Raised", icon: "FUNDS", color: "from-orange-500 via-pink-500 to-orange-600", prefix: "$", suffix: "M+" },
-              { number: 150, label: "Partner Organizations", icon: "PARTNERS", color: "from-purple-500 via-violet-500 to-purple-600", suffix: "+" }
-            ].map((stat, index) => (
-              <div
-                key={stat.label}
-                className={`group relative animate-bounceIn hover-lift`}
-                style={{ animationDelay: `${index * 0.2}s` }}
-              >
-                <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 text-center border border-white/20 hover:bg-white/20 hover:border-white/30 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20">
-                  <div className="relative mb-6">
-                    <div className={`w-20 h-20 bg-gradient-to-br ${stat.color} rounded-3xl flex items-center justify-center mx-auto mb-4 group-hover:rotate-12 group-hover:scale-110 transition-all duration-500 shadow-xl border border-white/20`}>
-                      <span className="text-white font-bold text-xs">{stat.icon}</span>
-                    </div>
-                    <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full animate-pulse shadow-lg"></div>
-                  </div>
-
-                  <div className="text-4xl lg:text-5xl font-bold text-white mb-3 group-hover:scale-110 transition-transform duration-300 drop-shadow-lg">
-                    <AnimatedCounter 
-                      end={stat.number} 
-                      prefix={stat.prefix || ''} 
-                      suffix={stat.suffix || ''} 
-                    />
-                  </div>
-                  <div className="text-blue-100 font-medium text-lg">{stat.label}</div>
-
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-indigo-500/20 to-cyan-500/20 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* New Unique Sections */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <div className="grid lg:grid-cols-2 gap-12 mb-16">
-            <DonationTracker />
-            <NewsletterSignup />
-          </div>
-          <TestimonialCarousel />
-        </div>
-      </section>
     </div>
   );
 }

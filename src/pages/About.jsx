@@ -171,6 +171,33 @@ export default function About() {
         <MissionVisionValues />
         <ThreePillars />
         <ImpactNumbers />
+        
+        {/* Past Present Future */}
+        <section className="mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12 animate-fadeIn">
+            Our Journey Through Time
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 animate-slideInLeft">
+              <h3 className="text-2xl font-bold text-blue-900 mb-4 text-center">Past</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Founded in 2018, we've transformed thousands of lives through education and empowerment. Our journey began with a simple vision to create lasting change in underserved communities.
+              </p>
+            </div>
+            <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 animate-slideInUp delay-100">
+              <h3 className="text-2xl font-bold text-green-900 mb-4 text-center">Present</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Currently serving 50+ countries with active programs in education, empowerment, and entrepreneurship. We're making a real difference in communities worldwide.
+              </p>
+            </div>
+            <div className="bg-gradient-to-br from-orange-50 to-pink-50 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 animate-slideInRight delay-200">
+              <h3 className="text-2xl font-bold text-orange-900 mb-4 text-center">Future</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Expanding our reach to impact 100,000+ lives by 2030 through innovative programs and strategic partnerships. The future holds unlimited possibilities.
+              </p>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   );
