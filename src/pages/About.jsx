@@ -157,7 +157,7 @@ function ImpactNumbers() {
             </div>
             <div className="text-blue-100">{stat.label}</div>
           </div>
-        ))
+        ))}
       </div>
     </section>
   );
