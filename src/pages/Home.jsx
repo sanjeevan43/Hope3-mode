@@ -1,5 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import DonationTracker from '../components/DonationTracker';
+import NewsletterSignup from '../components/NewsletterSignup';
+import TestimonialCarousel from '../components/TestimonialCarousel';
+import AnimatedCounter from '../components/AnimatedCounter';
 
 function HeroSection() {
   return (
@@ -19,103 +23,46 @@ function HeroSection() {
         <div className="absolute top-1/2 right-10 w-16 h-16 bg-sky-400/10 rounded-full animate-pulse delay-1500"></div>
       </div>
 
-      <div className="relative z-10 min-h-screen flex items-center">
+      {/* Full Screen Image Slider */}
+      <div className="absolute inset-0 z-10">
+        <div className="flex animate-slide h-full" style={{animation: 'slide 15s infinite'}}>
+          <img src={process.env.PUBLIC_URL + '/myTeam.jpg'} alt="HOPE3 Team Members" className="w-full h-full object-cover flex-shrink-0" />
+          <img src={process.env.PUBLIC_URL + '/hope.jpg'} alt="Community Outreach" className="w-full h-full object-cover flex-shrink-0" />
+          <img src={process.env.PUBLIC_URL + '/liked-one.jpg'} alt="Empowerment Program" className="w-full h-full object-cover flex-shrink-0" />
+          <img src={process.env.PUBLIC_URL + '/first.jpg'} alt="Foundation Activities" className="w-full h-full object-cover flex-shrink-0" />
+          <img src={process.env.PUBLIC_URL + '/function.jpg'} alt="Community Events" className="w-full h-full object-cover flex-shrink-0" />
+          <img src="/pongal.jpg" alt="Cultural Celebration" className="w-full h-full object-cover flex-shrink-0" />
+        </div>
+      </div>
+      
+      {/* Content Overlay */}
+      <div className="relative z-20 min-h-screen flex items-end pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left Content */}
-            <div className="text-white space-y-8">
-              <div className="animate-fadeIn">
-                <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-6">
-                  <span className="text-sm font-medium flex items-center gap-2">
-                    <span className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></span>
-                    Transforming Lives Since 2018
-                  </span>
-                </div>
-              </div>
-              
-              <div className="animate-slideInLeft">
-                <div className="relative w-full h-64 overflow-hidden rounded-3xl shadow-2xl mb-6">
-                  <div className="flex animate-slide" style={{animation: 'slide 15s infinite'}}>
-                    <img src={process.env.PUBLIC_URL + '/myTeam.jpg'} alt="HOPE3 Team Members" className="w-full h-64 object-cover flex-shrink-0" />
-                    <img src={process.env.PUBLIC_URL + '/hope.jpg'} alt="Community Outreach" className="w-full h-64 object-cover flex-shrink-0" />
-                    <img src={process.env.PUBLIC_URL + '/liked-one.jpg'} alt="Empowerment Program" className="w-full h-64 object-cover flex-shrink-0" />
-                    <img src={process.env.PUBLIC_URL + '/first.jpg'} alt="Foundation Activities" className="w-full h-64 object-cover flex-shrink-0" />
-                    <img src={process.env.PUBLIC_URL + '/function.jpg'} alt="Community Events" className="w-full h-64 object-cover flex-shrink-0" />
-                    <img src={process.env.PUBLIC_URL + '/pongal.jpg'} alt="Cultural Celebration" className="w-full h-64 object-cover flex-shrink-0" />
-
-                  </div>
-                </div>
-              </div>
-              
-              <div className="animate-slideInLeft delay-200">
-                <p className="text-xl lg:text-2xl text-blue-100 leading-relaxed max-w-2xl">
-                              I’m shaped by a big HOPE3 family, where every person adds strength to my journey.  
-                                            </p>
-              </div>
-              
-              
-              <div className="animate-scaleIn delay-600">
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Link to="/volunteer" className="group bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                    <span className="flex items-center justify-center gap-2">
-                      Join as Volunteer
-                      <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                      </svg>
-                    </span>
-                  </Link>
-                  <Link to="/contact" className="group border-2 border-white/30 text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:scale-105 backdrop-blur-sm">
-                    <span className="flex items-center justify-center gap-2">
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-                      </svg>
-                      Join Mission
-                    </span>
-                  </Link>
-                </div>
-              </div>
+          <div className="text-center text-white space-y-6">
+            <div className="animate-slideInUp delay-200">
+              <p className="text-xl lg:text-2xl text-white leading-relaxed max-w-3xl mx-auto bg-black/30 backdrop-blur-sm rounded-2xl p-6">
+                I'm shaped by a big HOPE3 family, where every person adds strength to my journey.
+              </p>
             </div>
             
-            {/* Right Visual */}
-            <div className="relative animate-slideInRight delay-300">
-              <div className="relative">
-                {/* Main Circle */}
-                <div className="w-96 h-96 mx-auto relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-indigo-600/20 rounded-full animate-pulse"></div>
-                  <div className="absolute inset-4 bg-gradient-to-br from-blue-500/30 to-indigo-700/30 rounded-full animate-pulse delay-500"></div>
-                  <div className="absolute inset-8 bg-gradient-to-br from-blue-600/40 to-indigo-800/40 rounded-full animate-pulse delay-1000"></div>
-                  
-                  {/* Center Content */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="text-6xl font-bold text-white mb-4">H3</div>
-                      <div className="text-xl font-semibold text-blue-200">HOPE3</div>
-                      <div className="text-sm text-blue-300 mt-2">Family</div>
-                    </div>
-                  </div>
-                  
-                  {/* Orbiting Elements */}
-                  <div className="absolute top-8 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-2xl flex items-center justify-center text-white font-bold animate-bounce">
-                    love
-                  </div>
-                  <div className="absolute right-8 top-1/2 transform -translate-y-1/2 w-16 h-16 bg-gradient-to-r from-indigo-400 to-cyan-500 rounded-2xl flex items-center justify-center text-white font-bold animate-bounce delay-500">
-                    care
-                  </div>
-                  <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-r from-cyan-400 to-sky-500 rounded-2xl flex items-center justify-center text-white font-bold animate-bounce delay-1000">
-                    won
-                  </div>
-                </div>
-                
-                {/* Floating Stats */}
-                <div className="absolute -top-8 -left-8 bg-white/10 backdrop-blur-sm rounded-2xl p-4 animate-float">
-                  <div className="text-2xl font-bold text-white">25K+</div>
-                  <div className="text-xs text-blue-200">Lives Changed</div>
-                </div>
-                
-                <div className="absolute -bottom-8 -right-8 bg-white/10 backdrop-blur-sm rounded-2xl p-4 animate-float delay-1000">
-                  <div className="text-2xl font-bold text-white">50+</div>
-                  <div className="text-xs text-blue-200">Countries</div>
-                </div>
+            <div className="animate-scaleIn delay-600">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link to="/volunteer" className="group bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                  <span className="flex items-center justify-center gap-2">
+                    Join as Volunteer
+                    <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                  </span>
+                </Link>
+                <Link to="/contact" className="group border-2 border-white/30 text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:scale-105 backdrop-blur-sm">
+                  <span className="flex items-center justify-center gap-2">
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                    Join Mission
+                  </span>
+                </Link>
               </div>
             </div>
           </div>
