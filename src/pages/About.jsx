@@ -125,12 +125,7 @@ function ThreePillars() {
 }
 
 function ImpactNumbers() {
-  const stats = [
-    { number: "25,800+", label: "Lives Impacted", icon: "👥" },
-    { number: "50+", label: "Countries Reached", icon: "🌍" },
-    { number: "$2.5M+", label: "Funds Raised", icon: "💰" },
-    { number: "150+", label: "Partner Organizations", icon: "🤝" }
-  ];
+
 
   return (
     <section className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-lg p-8 md:p-12 text-white mb-16 animate-fadeIn">

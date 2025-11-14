@@ -1,9 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import DonationTracker from '../components/DonationTracker';
-import NewsletterSignup from '../components/NewsletterSignup';
-import TestimonialCarousel from '../components/TestimonialCarousel';
-import AnimatedCounter from '../components/AnimatedCounter';
 
 function HeroSection() {
   return (
@@ -31,7 +27,7 @@ function HeroSection() {
           <img src={process.env.PUBLIC_URL + '/liked-one.jpg'} alt="Empowerment Program" className="w-full h-full object-cover flex-shrink-0" />
           <img src={process.env.PUBLIC_URL + '/first.jpg'} alt="Foundation Activities" className="w-full h-full object-cover flex-shrink-0" />
           <img src={process.env.PUBLIC_URL + '/function.jpg'} alt="Community Events" className="w-full h-full object-cover flex-shrink-0" />
-          <img src="/pongal.jpg" alt="Cultural Celebration" className="w-full h-full object-cover flex-shrink-0" />
+          <img src={process.env.PUBLIC_URL + '/pongal.jpg'} alt="Cultural Celebration" className="w-full h-full object-cover flex-shrink-0" />
         </div>
       </div>
       

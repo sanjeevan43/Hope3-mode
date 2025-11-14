@@ -75,7 +75,7 @@ function ImpactMap() {
     }, 500);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [regions]);
 
   const totalStats = regions.reduce((acc, region) => ({
     countries: acc.countries + region.countries,

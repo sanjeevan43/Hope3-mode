@@ -4,8 +4,7 @@ import ImpactMap from '../components/ImpactMap';
 // Color & style constants
 const primaryBlueBg = "bg-blue-600";
 const primaryBlueHoverBg = "hover:bg-blue-700";
-const softGreenBg = "bg-green-500";
-const softGreenHoverBg = "hover:bg-green-600";
+
 const neutralBg = "bg-white";
 
 function ImpactHeader({ year, setYear }) {
@@ -15,7 +14,7 @@ function ImpactHeader({ year, setYear }) {
       <div className="mb-8 animate-scaleIn">
         <img 
           src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-          alt="Community impact" 
+          alt="Community members working together" 
           className="w-full h-64 object-cover rounded-lg shadow-lg"
         />
       </div>

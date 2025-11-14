@@ -20,13 +20,13 @@ function Navbar() {
             <div className="flex items-center">
               <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">H</span>
               <img 
-                src={process.env.PUBLIC_URL +'/logo.png'} 
+                src={process.env.PUBLIC_URL + '/logo.png'} 
                 alt="O" 
                 className="w-3 h-3 xs:w-3.5 xs:h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 mx-0.5 xs:mx-0.5 sm:mx-1"
               />
               <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">PE 3</span>
             </div>
-            <h6 className="text-xs xs:text-xs sm:text-xs text-gray-500 font-normal -mt-0.5 sm:-mt-1 hidden xs:block">FOR A BETTER TOMORROW</h6>
+            <h6 className="text-xs text-gray-500 font-normal -mt-0.5 sm:-mt-1">FOR A BETTER TOMORROW</h6>
           </div>
         </Link>
         <ul className="hidden md:flex space-x-2 lg:space-x-4 xl:space-x-6 2xl:space-x-8 text-gray-700 font-medium text-xs md:text-sm lg:text-base xl:text-base">

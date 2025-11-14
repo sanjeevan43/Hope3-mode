@@ -1,5 +1,6 @@
 @tailwind base;
 @tailwind components;
+@tailwind utilities;
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -46,8 +47,6 @@
     --ring: 224.3 76.3% 94.1%;
   }
 }
-@tailwind utilities;
-
 /* Enhanced animations with more variety and professional timing */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(30px); }
