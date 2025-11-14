@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Hope3-mode/static/css/main.b74563d0.css",
-    "main.js": "/Hope3-mode/static/js/main.ce951c6c.js",
+    "main.css": "/Hope3-mode/static/css/main.133f8fc5.css",
+    "main.js": "/Hope3-mode/static/js/main.b46e69bc.js",
     "index.html": "/Hope3-mode/index.html",
-    "main.b74563d0.css.map": "/Hope3-mode/static/css/main.b74563d0.css.map",
-    "main.ce951c6c.js.map": "/Hope3-mode/static/js/main.ce951c6c.js.map"
+    "main.133f8fc5.css.map": "/Hope3-mode/static/css/main.133f8fc5.css.map",
+    "main.b46e69bc.js.map": "/Hope3-mode/static/js/main.b46e69bc.js.map"
   },
   "entrypoints": [
-    "static/css/main.b74563d0.css",
-    "static/js/main.ce951c6c.js"
+    "static/css/main.133f8fc5.css",
+    "static/js/main.b46e69bc.js"
   ]
 }
