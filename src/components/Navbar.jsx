@@ -17,7 +17,15 @@ function Navbar() {
             className="w-10 h-10 rounded-xl shadow-lg"
           />
           <div className="flex flex-col">
-            <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">HOPE 3</span>
+            <div className="flex items-center">
+              <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">H</span>
+              <img 
+                src={process.env.PUBLIC_URL +'/logo.png'} 
+                alt="O" 
+                className="w-6 h-6 mx-1"
+              />
+              <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">PE 3</span>
+            </div>
             <h6 className="text-xs text-gray-500 font-normal -mt-1">FOR A BETTER TOMORROW</h6>
           </div>
         </Link>
